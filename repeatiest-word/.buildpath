@@ -24,5 +24,5 @@
 	<buildpathentry kind="src" path="vendor/phpunit/php-token-stream/src"/>
 	<buildpathentry kind="src" path="vendor/sebastian/environment/src"/>
 	<buildpathentry kind="src" path="vendor/composer"/>
-	<buildpathentry external="true" kind="lib" path="/home/pmcdermott/.eclipse/org.eclipse.platform_4.5.2_1473617060_linux_gtk_x86_64/configuration/org.eclipse.osgi/303/0/.cp/Resources/language/php7"/>
+	<buildpathentry kind="src" path="vendor/phpunit/phpunit-selenium/PHPUnit"/>
 </buildpath>

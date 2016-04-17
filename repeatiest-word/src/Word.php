@@ -7,6 +7,9 @@ class Word {
 	 * @param string $word an english word.
 	 */
 	public function __construct($word){
+		if (!ctype_alpha ($word)){
+			throw new Exception("Words may only have letters");
+		}
 		$this->word = $word;
 	}
 	
@@ -16,7 +19,22 @@ class Word {
 	 * @return number
 	 */
 	function countHighestLetterRepeat(){
-		return 0;
+		$characters = str_split ( $this->word , 1  );
+		
+		//hashmap or characters and their count
+		$characterCount = array();
+		
+		foreach( $characters as $character){
+			if (array_key_exists ( $character , $characterCount )){
+				$characterCount[$character]++;
+			}
+			else{
+				$characterCount[$character] = 1;
+			}
+		}
+		
+		
+		return max($characterCount);
 	}
 }
 
