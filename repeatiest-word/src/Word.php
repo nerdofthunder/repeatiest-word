@@ -10,6 +10,7 @@ class Word {
 		if (!ctype_alpha ($word)){
 			throw new Exception("Words may only have letters");
 		}
+		$word = strtolower($word);
 		$this->word = $word;
 	}
 	
