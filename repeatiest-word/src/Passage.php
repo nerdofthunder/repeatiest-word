@@ -30,9 +30,11 @@ class Passage{
 	private function splitPassageIntoWords(){
 		$explodedPassage = explode ( " " , $this->passage );
 		$words = array();
-		
 		foreach ($explodedPassage as $word){
-			array_push($words, new Word($word));
+			$word = trim($word);
+			if(!empty($word)){
+				array_push($words, new Word($word));
+			}
 		}
 		return $words;
 	}
@@ -58,6 +60,7 @@ class Passage{
 				$winningWord = $word->getWordAsString();
 			}
 		}
+		return $winningWord;
 	}
 	
 }
