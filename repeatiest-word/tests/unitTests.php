@@ -27,11 +27,18 @@ class repeatiestWordTests extends PHPUnit_Framework_TestCase
 	}
 	
 	public function testGetRepeatiestWord(){
+		
+		//Test cases provided in problem examples. 
+		//(If I don't at least get these, I did something wrong)
 		$passage1 = new Passage("O Romeo, Romeo, wherefore art thou Romeo?");
 		$this->assertEquals($passage1->getRepeatiestWord(), "wherefore");
 		
 		$passage2 = new Passage("Some people feel the rain, while others just get wet.");
 		$this->assertEquals($passage2->getRepeatiestWord(), "people");
+		
+		//Ensure newlines don't trip us up.
+		$passage3 = new Passage("O Romeo, Romeo, wherefore art \n thou Romeo?");
+		$this->assertEquals($passage3->getRepeatiestWord(), "wherefore");
 	}
 	
 	
