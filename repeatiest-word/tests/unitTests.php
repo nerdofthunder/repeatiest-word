@@ -1,7 +1,8 @@
 <?php
 require __DIR__ . '/../src/Word.php';
+require __DIR__ . '/../src/Passage.php';
 
-class letterCounterTest extends PHPUnit_Framework_TestCase
+class repeatiestWordTests extends PHPUnit_Framework_TestCase
 {
 	public function testLetterCounter(){
 		$word1 = new Word("butter");
@@ -17,6 +18,20 @@ class letterCounterTest extends PHPUnit_Framework_TestCase
 		
 		//test that upper and lower case letters are treated the same
 		$this->assertEquals($word5->countHighestLetterRepeat(), 4);
+	}
+	
+	public function testPassageCleaning(){
+		$passage1 = new Passage("The stars 3 night in _mexico");
+		$this->assertEquals($passage1->getCleanedPassage(), "The stars night in mexico");
+		
+	}
+	
+	public function testGetRepeatiestWord(){
+		$passage1 = new Passage("O Romeo, Romeo, wherefore art thou Romeo?");
+		$this->assertEquals($passage1->getRepeatiestWord(), "wherefore");
+		
+		$passage2 = new Passage("Some people feel the rain, while others just get wet.");
+		$this->assertEquals($passage2->getRepeatiestWord(), "people");
 	}
 	
 	
