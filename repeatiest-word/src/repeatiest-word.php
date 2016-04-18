@@ -12,4 +12,3 @@ $passage = new Passage(fread($myfile,filesize($argv[1])));
 fclose($myfile);
 
 echo $passage->getRepeatiestWord()."\n";
-	
