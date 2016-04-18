@@ -1,5 +1,9 @@
 set working directory to repeatiest-word's project directory.
 
+bringing in dependencies:
+make repeatiest-word project directory the working directory
+	#composer update
+
 phpunit version: 5.3.2 
 	This is the version of php unit I happened to work with. 
 
