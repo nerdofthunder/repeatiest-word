@@ -1,0 +1,7 @@
+set working directory to repeatiest-word's project directory.
+
+phpunit version: 5.3.2 
+	This is the version of php unit I happened to work with. 
+
+Run all unit tests:
+	# phpunit repeatiestWordTests tests/unitTests.php
